@@ -42,63 +42,63 @@ Click the Create button in the top left corner of the Resource Group page.  <br/
 <br />
 <br />
 Choose the name of your Resource Group and the Region. I chose RG-UCS-Nextcloud, RG for Resource Group, UCS for the US South Central Region, and Nextcloud because we are creating a Nextcloud server. The naming convention is up to you, but I recommend whatever you decide just be consistent.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/xSsZQ9K.png"/>
 <br />
 <br />
 Click on the Review + create button on the previous page and then on the create button as shown here. Both buttons are located at the bottom left of the page.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/KdkT8Wc.png"/>
 <br />
 <br />
 Once the Resource Group is finished being created, click on the go to resource group button at the top right of the page. Congratulations, you have just created your first Resource Group!!!  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/MFWeGwD.png"/>
 <br />
 <br />
 
 <h3> 2) Create a Virtual Network and a subnet</h3>
 While in your Resource Group that was just created, click the create button.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/7xHDgOW.png"/>
 <br />
 <br />
 Then search for Virtual Network in the search bar. Find the result that says Virtual Network and click create.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/sexs5LU.png"/>
 <br />
 <br />
 Here you will be able to choose which Resource Group you would like the Virtual Network in. Choose the Resource Group that we just created, in my case it is RG-USC-Nextcloud. Next, name the Virtual Network and keep consistent to the naming convention that you chose before. Mine is named VNET-USC-Nextcloud. Keep in mind, the Virtual Network needs to be in the same Region as Resource Group. Click next at the bottom of the page until you get the the IP Addresses tab.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/WtPGhea.png"/>
 <br />
 <br />
 The Virtual Network is populated with a default IP address space. We are going to assign our own IP so click the Delete Address Space button.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/Dx0nPJP.png"/>
 <br />
 <br />
 It will then give you an error message saying You must add at least one address space to the virtual network. Click the Add IPv4 address space button.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/DD6WNNt.png"/>
 <br />
 <br />
 After creating a new IPv4 Address Space, we need to assign our IP Address range. Here I chose 172.10.0.0/16. We also want to create a Subnet, click the Add a subnet button within the Address Space. In the Add a subnet sheet, we need to name the subnet. Again, keep to the chosen naming convention, SNET-USC-Nextcloud. Choose the IPv4 address range, the Starting address and the Size. The IPv4 Address range is the range we just created in the address space, the starting address can be the first IPv4 address in that address range, and for the size I chose /24, which will give me 256 IP addresses but Azure uses 5 address so only 251 usable IPv4 addresses. Click Add at the bottom of the Add a subnet sheet. After you have chosen your Address range and subnet, click the Review + create button at the bottom left of the page.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/nlJdAT9.png"/>
 <br />
 <br />
 After the Virtual Network finishes validating, click the create button at the bottom of the page.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/fITWtW8.png"/>
 <br />
 <br />
 Once the Virtual Network has been created, you will be able to see the network under your Resource Group.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/1vlt17L.png"/>
 <br />
 <br />
 If you click on our Virtual Network that we just made, you will be able to verify the Address space at the top right of the page. In the hamburger menue on the left, you can also click on Address space or Subnets if you want to verify the addresses.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/N0RjNS2.png"/>
 <br />
 <br />
 Scroll down in the hamburger menue and click on the Diagram button. Here we can see the topology of our Virtual Network so far. We can the subnet we created within the Virtual Network we created.  <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src="https://i.imgur.com/5vQVvsJ.png"/>
 <br />
 <br />
 
 <!--
   <br/>
-<img src="https://i.imgur.com/SAoaUFU.png"/>
+<img src=""/>
 <br />
 <br />
 
