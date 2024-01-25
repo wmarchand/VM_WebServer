@@ -18,31 +18,48 @@ In this Guided Project, you will create a Virtual Machine in Azure to deploy a w
 <h2>Azure Project Architecture</h2>
 <img src="https://i.imgur.com/wGSQbAG.png">
 
-<h2>Pre Project Set-UP</h2>
+<h2>Pre-Project Set-Up</h2>
  - Sign up for a free Azure Account or use an exsisting account <br/>
  - Login to the Azure Portal
  <br />
  <br />
  <p align="center">
  Login to portal.azure.com: <br/>
- [<img src="https://i.imgur.com/TUzFP8L.png"/>][login]
- [login]: https://portal.azure.com
+ <img src="https://i.imgur.com/TUzFP8L.png"/>
 
 <h2>Program walk-through:</h2>
 
-<h3>1) Create a Resource Group</h3>
+<h3> 1) Create a Resource Group</h3>
 
+<br />
 <p align="center">
-Create a Resource Group: <br/>
-<img src=""/>
+There are multiple ways to get to the start of creating a Resource Group. For this lab, I clicked on the Resource Group button on the home page of the Azure Portal. <br/>
+<img src="https://i.imgur.com/a26tkVw.png"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src=""/>
+Click the Create button in the top left corner of the Resource Group page.  <br/>
+<img src="https://i.imgur.com/SAoaUFU.png"/>
 <br />
 <br />
-Enter the number of passes: <br/>
+Choose the name of your Resource Group and the Region. I chose RG-UCS-Nextcloud, RG for Resource Group, UCS for the US South Central Region, and Nextcloud because we are creating a Nextcloud server. The naming convention is up to you, but I recommend whatever you decide just be consistent.  <br/>
+<img src="https://i.imgur.com/SAoaUFU.png"/>
+<br />
+<br />
+Click on the Review + create button on the previous page and then on the create button as shown here. Both buttons are located at the bottom left of the page.  <br/>
+<img src="https://i.imgur.com/SAoaUFU.png"/>
+<br />
+<br />
+Once the Resource Group is finished being created, click on the go to resource group button at the top right of the page. Congratulations, you have just created your first Resource Group!!!  <br/>
+<img src="https://i.imgur.com/SAoaUFU.png"/>
+<br />
+<br />
 
+
+<!--
+  <br/>
+<img src="https://i.imgur.com/SAoaUFU.png"/>
+<br />
+<br />
 
 <!--
  ```diff
