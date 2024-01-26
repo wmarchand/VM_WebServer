@@ -96,6 +96,44 @@ Scroll down in the hamburger menue and click on the Diagram button. Here we can 
 <br />
 <br />
 
+<h3> 3) Protect a subnet using a Network Security Group</h3>
+We are not going to better secure our Virtual Network by using a Network Security Group. While on the page of your Resource Group, click the create button.  <br/>
+<img src=""/>
+<br />
+<br />
+Search for Network Security Group in the search bar. Find the result that says Network Security Group and click the create button within the box.  <br/>
+<img src=""/>
+<br />
+<br />
+We need to make sure we are in the right Resource Group and the correct Region and give our Network Security Group a name using our previous naming convention. Mine will be NSG-USC-NextCloud. Click the Review + create button when finished.  <br/>
+<img src=""/>
+<br />
+<br />
+Once it has passed the Validation, click the create button in the bottom left corner.  <br/>
+<img src=""/>
+<br />
+<br />
+Congratulations, your Network Security Group has been created! Click on the Go to resource button to configure the rules.  <br/>
+<img src=""/>
+<br />
+<br />
+As you can see, Azure has created some default rules for us, these will be sufficient for what we need. Now lets assign these rules to our subnets. Click on our Resource Group to go back to that page.  <br/>
+<img src=""/>
+<br />
+<br />
+Here we can see that our Network Security Group has been created and added to our Resource Group. To assign it to our subnets, we need to go to our Virtual Network by clicking our Virtual Networks name below the Network Security Group.  <br/>
+<img src=""/>
+<br />
+<br />
+Once in your Virtual Network, click on Subnets in the left Hamburger menu. Then click on your subnet and on the right hand side, choose the Network Security Group that we just made. Then click save to finish the set up.  <br/>
+<img src=""/>
+<br />
+<br />
+Lets see how the Network Security Group changed our Network Architecture. In the left hamburger menu, scroll down and select diagram. Here we can see that a Network Security Group has been added in our Virtual Network and connected to our subnet.  <br/>
+<img src=""/>
+<br />
+<br />
+
 <!--
   <br/>
 <img src=""/>
