@@ -134,6 +134,72 @@ Lets see how the Network Security Group changed our Network Architecture. In the
 <br />
 <br />
 
+<h3> 4) Deploy Bastion to connect to a Virtual Machine</h3>
+We are now going to deploy Bastion to connect to our Virtual Machine. We first need to create a new Subnet for Bastion. Under your Virtual Network, click Subnets in the hamburger menu on the left. Then click the + Subnet button near the top left. Unlike our previous Subnet, the name of the Subnet for Bastion is required, it has to be AzureBastionSubnet. We can keep all the rest of the defualts and click save at the bottom.  <br/>
+<img src=""/>
+<br />
+<br />
+We can verify here that our Bastion Subnet was created. We now need to create our Bastion Resource.  <br/>
+<img src=""/>
+<br />
+<br />
+If we go back to the overview of our Resource Group, we can click + Create near the top left.  <br/>
+<img src=""/>
+<br />
+<br />
+Search for Bastion and click the Create button when you find the correct Resource.  <br/>
+<img src=""/>
+<br />
+<br />
+You can see here, that our Resource Group was selected for us by default. We need to name our Bastion Resource and this time we can go back to our original naming convention, I chose BASTION-USC-Nextcloud. It gives us a default for the public IP address name, this has nothing to do with our Virtual Machine, so we are going to rename it the same as our Bastion Resource, BASTION-USC-Nextcloud. Then click Revew + create at the bottom left of the page. Then click create again once our Bastion Resource is done verifying. *NOTE* This will take a while to create, longer than anything we have created so far, you can continue the next steps while the Bastion Resource is being created.  <br/>
+<img src=""/>
+<br />
+<br />
+Here we can see our Bastion Resource was created successfully.  <br/>
+<img src=""/>
+<br />
+<br />
+
+<h3> 5) Create an Ubuntu Server Virtual Machine</h3>
+We are now going to get to create our Virtual Machine! Make sure you are on your Resource Group page and click the + Create button.  <br/>
+<img src=""/>
+<br />
+<br />
+There might be a selection that comes up for an Ubuntu sever without the need to search for it. If not, search for Ubuntu. There will be multiple verstions of Ubuntu that appear. For this project, we are going to select the Ubuntu Server with the highest version number, in my case that is Ubuntu Server 23.10. Click create.  <br/>
+<img src=""/>
+<br />
+<br />
+First, we need to name our Virtual Machine with our same naming convention, mine is VM-USC-Nextcloud.  <br/>
+<img src=""/>
+<br />
+<br />
+Next we need to scroll down on the page until we get to the Size, click the see all sizes button to see our options.   <br/>
+<img src=""/>
+<br />
+<br />
+Here we can see all of the options we have while configuring a Virtual Machine. We are going to choose a basic one as we using minimal resources using it as a web server. The names of the sizes might change with time, for this project just choose the cheapest option, I chose B2ats_v2. Click on select at the botton left of the page.  <br/>
+<img src=""/>
+<br />
+<br />
+We now need to set up our Administrator Account. We are going to be using an SSH public key instead of a password. First we need to set our username, you can choose whatever you want, and then we are going to modify the default key pair name to be more specific, VM-USC-Nextcloud_SSHkey. Sice we are deploying Bastion, that is how we will be connecting to our Virtual Machine so we want to make sure to close all of the ports. Select the None radio button under Public inbound ports. Click the button Next: Disks >  <br/>
+<img src=""/>
+<br />
+<br />
+For this project, we are going to keep all of the OS disk defaults, go ahead and click the Next: Networking > button.  <br/>
+<img src=""/>
+<br />
+<br />
+We are going to set our own Public IP, so in the drop down box for Public IP, selct none. Since we already made our own Network Security Group, make sure the radio button none is selected for NIC network secruity group. Click Review + create at the bottom left of the page.  <br/>
+<img src=""/>
+<br />
+<br />
+  <br/>
+<img src=""/>
+<br />
+<br />
+
+
+
 <!--
   <br/>
 <img src=""/>
