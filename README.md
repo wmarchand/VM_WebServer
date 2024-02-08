@@ -206,6 +206,11 @@ Congrats! You have successfully created a Virtual Machine in Azure!  <br/>
 <br />
 <br />
 
+<h3> 6) Install Nextcloud by connecting via SSH using Bastion</h3>
+  <br/>
+<img src=""/>
+<br />
+<br />
 
 <!--
   <br/>
