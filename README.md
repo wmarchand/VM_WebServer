@@ -162,47 +162,47 @@ Here we can see our Bastion Resource was created successfully.  <br/>
 
 <h3> 5) Create an Ubuntu Server Virtual Machine</h3>
 We are now going to get to create our Virtual Machine! Make sure you are on your Resource Group page and click the + Create button.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/lxH4df5.png"/>
 <br />
 <br />
 There might be a selection that comes up for an Ubuntu sever without the need to search for it. If not, search for Ubuntu LTS. LTS stands for Long Term Support and when deploying a server of any kind, this is usually what you want. There will be multiple verstions of Ubuntu LTS that appear. For this project, we are going to select the Ubuntu Server with the highest version number, in my case that is Ubuntu Server 22.04 LTS. Click create.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/Ya7LFgC.png"/>
 <br />
 <br />
 First, we need to name our Virtual Machine with our same naming convention, mine is VM-USC-Nextcloud.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/cPkrVDW.png"/>
 <br />
 <br />
 Next we need to scroll down on the page until we get to the Size, click the see all sizes button to see our options.   <br/>
-<img src=""/>
+<img src="https://i.imgur.com/5wQvhWP.png"/>
 <br />
 <br />
 Here we can see all of the options we have while configuring a Virtual Machine. We are going to choose a basic one as we using minimal resources using it as a web server. The names of the sizes might change with time, for this project just choose the cheapest option, I chose B1s. Click on select at the botton left of the page.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/OJ5LMGc.png"/>
 <br />
 <br />
 We now need to set up our Administrator Account. We are going to be using an SSH public key instead of a password. First we need to set our username, you can choose whatever you want, and then we are going to modify the default key pair name to be more specific, VM-USC-Nextcloud_SSHkey. Sice we are deploying Bastion, that is how we will be connecting to our Virtual Machine so we want to make sure to close all of the ports. Select the None radio button under Public inbound ports. Click the button Next: Disks >  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/0A5pueO.png"/>
 <br />
 <br />
 For this project, we are going to keep all of the OS disk defaults, go ahead and click the Next: Networking > button.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/hJYIIdJ.png"/>
 <br />
 <br />
 We are going to set our own Public IP, so in the drop down box for Public IP, selct none. Since we already made our own Network Security Group, make sure the radio button none is selected for NIC network secruity group. That is all of the settings we need at the moment, so click Review + create at the bottom left of the page.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/8EcaEnv.png"/>
 <br />
 <br />
 We are looking for the green check mark that means the validation has passed and then click the create button at the bottom left of the page.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/iXbH2su.png"/>
 <br />
 <br />
 Since we are planning to log into our VM through Bastion, we need to generate a new key pair. A prompt will show up telling you that you Azure doesn't store the private key of the key pair and we need to download it. Beware that you will not be able to redownload the private key after the VM is created. Click the Download private key and create resource button. This will take a few minutes to create the VM.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/4FbkqBe.png"/>
 <br />
 <br />
 Congrats! You have successfully created a Virtual Machine in Azure!  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/DU1yAh2.png"/>
 <br />
 <br />
 
