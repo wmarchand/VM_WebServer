@@ -165,7 +165,7 @@ We are now going to get to create our Virtual Machine! Make sure you are on your
 <img src=""/>
 <br />
 <br />
-There might be a selection that comes up for an Ubuntu sever without the need to search for it. If not, search for Ubuntu. There will be multiple verstions of Ubuntu that appear. For this project, we are going to select the Ubuntu Server with the highest version number, in my case that is Ubuntu Server 23.10. Click create.  <br/>
+There might be a selection that comes up for an Ubuntu sever without the need to search for it. If not, search for Ubuntu LTS. LTS stands for Long Term Support and when deploying a server of any kind, this is usually what you want. There will be multiple verstions of Ubuntu LTS that appear. For this project, we are going to select the Ubuntu Server with the highest version number, in my case that is Ubuntu Server 22.04 LTS. Click create.  <br/>
 <img src=""/>
 <br />
 <br />
@@ -177,7 +177,7 @@ Next we need to scroll down on the page until we get to the Size, click the see 
 <img src=""/>
 <br />
 <br />
-Here we can see all of the options we have while configuring a Virtual Machine. We are going to choose a basic one as we using minimal resources using it as a web server. The names of the sizes might change with time, for this project just choose the cheapest option, I chose B2ats_v2. Click on select at the botton left of the page.  <br/>
+Here we can see all of the options we have while configuring a Virtual Machine. We are going to choose a basic one as we using minimal resources using it as a web server. The names of the sizes might change with time, for this project just choose the cheapest option, I chose B1s. Click on select at the botton left of the page.  <br/>
 <img src=""/>
 <br />
 <br />
@@ -189,15 +189,22 @@ For this project, we are going to keep all of the OS disk defaults, go ahead and
 <img src=""/>
 <br />
 <br />
-We are going to set our own Public IP, so in the drop down box for Public IP, selct none. Since we already made our own Network Security Group, make sure the radio button none is selected for NIC network secruity group. Click Review + create at the bottom left of the page.  <br/>
+We are going to set our own Public IP, so in the drop down box for Public IP, selct none. Since we already made our own Network Security Group, make sure the radio button none is selected for NIC network secruity group. That is all of the settings we need at the moment, so click Review + create at the bottom left of the page.  <br/>
 <img src=""/>
 <br />
 <br />
-  <br/>
+We are looking for the green check mark that means the validation has passed and then click the create button at the bottom left of the page.  <br/>
 <img src=""/>
 <br />
 <br />
-
+Since we are planning to log into our VM through Bastion, we need to generate a new key pair. A prompt will show up telling you that you Azure doesn't store the private key of the key pair and we need to download it. Beware that you will not be able to redownload the private key after the VM is created. Click the Download private key and create resource button. This will take a few minutes to create the VM.  <br/>
+<img src=""/>
+<br />
+<br />
+Congrats! You have successfully created a Virtual Machine in Azure!  <br/>
+<img src=""/>
+<br />
+<br />
 
 
 <!--
