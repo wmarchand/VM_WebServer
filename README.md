@@ -136,27 +136,27 @@ Lets see how the Network Security Group changed our Network Architecture. In the
 
 <h3> 4) Deploy Bastion to connect to a Virtual Machine</h3>
 We are now going to deploy Bastion to connect to our Virtual Machine. We first need to create a new Subnet for Bastion. Under your Virtual Network, click Subnets in the hamburger menu on the left. Then click the + Subnet button near the top left. Unlike our previous Subnet, the name of the Subnet for Bastion is required, it has to be AzureBastionSubnet. We can keep all the rest of the defualts and click save at the bottom.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/O0haIPI.png"/>
 <br />
 <br />
 We can verify here that our Bastion Subnet was created. We now need to create our Bastion Resource.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/EyhiCLt.png"/>
 <br />
 <br />
 If we go back to the overview of our Resource Group, we can click + Create near the top left.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/mnoQc2s.png"/>
 <br />
 <br />
 Search for Bastion and click the Create button when you find the correct Resource.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/hsagrHr.png"/>
 <br />
 <br />
 You can see here, that our Resource Group was selected for us by default. We need to name our Bastion Resource and this time we can go back to our original naming convention, I chose BASTION-USC-Nextcloud. It gives us a default for the public IP address name, this has nothing to do with our Virtual Machine, so we are going to rename it the same as our Bastion Resource, BASTION-USC-Nextcloud. Then click Revew + create at the bottom left of the page. Then click create again once our Bastion Resource is done verifying. *NOTE* This will take a while to create, longer than anything we have created so far, you can continue the next steps while the Bastion Resource is being created.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/aTLhcpD.png"/>
 <br />
 <br />
 Here we can see our Bastion Resource was created successfully.  <br/>
-<img src=""/>
+<img src="https://i.imgur.com/GnM9pHs.png"/>
 <br />
 <br />
 
