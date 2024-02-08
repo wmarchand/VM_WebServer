@@ -207,6 +207,75 @@ Congrats! You have successfully created a Virtual Machine in Azure!  <br/>
 <br />
 
 <h3> 6) Install Nextcloud by connecting via SSH using Bastion</h3>
+We will start by logging into our new VM using SSH via Bastion. Go to your Resource Group and click on your VM. Click connect and connect via Bastion.  <br/>
+<img src=""/>
+<br />
+<br />
+
+Now we will log into our VM using SSH via Bastion. For the authentication type, select SSH Private Key from Local File. Type in the username you setup in the last task. Click the folder icon and select the Private Key that you downloaded. Click connect at the bottom of the page.  <br/>
+<img src=""/>
+<br />
+<br />
+You are now connected to your VM using SSH via Bastion!!!  <br/>
+<img src=""/>
+<br />
+<br />
+Now lets install Nextcloud using the command, sudo snap install nextcloud. This might take a few minutes to download.  <br/>
+<img src=""/>
+<br />
+<br />
+We will now set up a Nextcloud account by using the command, sudo nextcloud.manual-install [username] [password]. I chose admin as my username and password123 as my password. Please make your credentials more secure than what I am doing for demonstration. <br/>
+<img src=""/>
+<br />
+<br />
+We need to make a self-signed certificate using the command, sudo nextcloud.enalbe-https self-signed.  <br/>
+<img src=""/>
+<br />
+<br />
+Once the certificate has been generated, we have succesffully installed Nextcloud on our VM by logging on using SSH via Bastion. You can use the command, exit, to log out of your VM. Click close once you have been Disconnected.  <br/>
+<img src=""/>
+<br />
+<br />
+
+<h3> 7) Publish an IP</h3>
+We will now access our Nextcloud instance on the internet. In order to do this, we need to make a Public IP and only allow HTTPS connections. Go back to the networking tab, and click on the networking interface. Mine is called vm-use-nextcloud127_z1.  <br/>
+<img src=""/>
+<br />
+<br />
+Click on the IP configurations in the hamburger menu on the left and then click on ipconfig1 to edit the configurations.  <br/>
+<img src=""/>
+<br />
+<br />
+Check the button Associate public IP address and the click on Create a public IP address. Rename the public IP address, I used VMIP-USE-Nextcloud and make sure to click the standard radio button under SKU. Click Okay and Save buttons.  <br/>
+<img src=""/>
+<br />
+<br />
+Once that has been created, go back to your VM and we can see that it now has a Public IP addresss.  <br/>
+<img src=""/>
+<br />
+<br />
+We need to set up where the VM is allowed to be accessed through https only by your IP. Go to google and type in Whats my IP. Copy your IP.   <br/>
+<img src=""/>
+<br />
+<br />
+Go back to your VM and click on Networking in the hamburger menu. Then click the Add inbound port rule button.  <br/>
+<img src=""/>
+<br />
+<br />
+The source should be your own IP. Choose IP and paste your previously copied IP address into the Source IP addresses box. The Destination address should be the private IP address of your virual machine, mine is 172.10.04. The service should be set to HTTPS and name the rule HTTPS_Nextcloud. Click the Add button at the bottom.  <br/>
+<img src=""/>
+<br />
+<br />
+Copy the public IP address of your VM and paste into your browser URL. Since we used a self-signed certificate, your browswer should give you a warning. Go ahead and accept that warning.  <br/>
+<img src=""/>
+<br />
+<br />
+Here we can see that the Nextcloud server is responding. It still says that we are trying to access it through an untrusted domain, this is because we need to create a DNS entry for our public IP and set it to Nextcloud.  <br/>
+<img src=""/>
+<br />
+<br />
+
+<h3> 8) Create a DNS label</h3>
   <br/>
 <img src=""/>
 <br />
